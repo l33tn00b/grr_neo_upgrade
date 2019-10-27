@@ -23,6 +23,19 @@ Issues on the way were:
 
 # Firmware Upgrade
 The printer comes with a repetier firmware v0.82. Nowadays, repetier is at v1.0.3. So while I was at the hotend upgrade I decided to update the firmware as well. The main reason was that I had to recompile anyway (because of the new thermistor included in the E3D v6).
+Don't be fooled by E3D's "this is easy". I had to update the bootloader as well. Assuming that you already have the Arduino IDE installed and that you're in possession of a programmer...
+## Firmware compilation
+1) get and install teensyduino
+2) compile repetier firmware for teensy++2.0 in arduino ide
+3) export hex file (will be written to your sourcecode directory) (DON'T FORGET THIS AFTER CHANGING configuration.h !)
+## Booloader Upgrade
+1) get hid bootloader from http://blog.lincomatic.com/?p=548
+2) get ready for programming (I'm using a JTAGICE3)
+3) flash bootloader 
+4) when done, you should see a message in the lower right corner of the screen indicating a successful installation of a HID input device :)
+5) flash newly compiled firmware (assuming the firmware file is in a subfolder called "Repetier"): hid_bootloader_cli -mmcu=at90usb1286 .\Repetier\Repetier.ino.TEENSY2PP.hex (don't forget to set and remove the BOOT jumper)
+
+See files for the configuration with the E3D v6 hotend. There also is a compiled image.
 
 # To Do
 * Adjustable Z axis end switch. The stock one is calibrated to a printing bed height that is based on 2mm PMMA plus BuildTak. I now print on glass which fits nicely with the E3D V6's slightly higher nozzle.
