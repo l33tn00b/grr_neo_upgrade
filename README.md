@@ -36,6 +36,7 @@ Don't be fooled by E3D's "this is easy". I had to update the bootloader as well.
 5) flash newly compiled firmware (assuming the firmware file is in a subfolder called "Repetier"): hid_bootloader_cli -mmcu=at90usb1286 .\Repetier\Repetier.ino.TEENSY2PP.hex (don't forget to set and remove the BOOT jumper)
 
 See files for the configuration with the E3D v6 hotend. There also is a compiled image.
+After removing the printer's back side for the nth time I decided it was time for a boot jumper extension dangling at the side. Makes firmware upgrades/changes much easier.
 
 # To Do
 * Adjustable Z axis end switch. The stock one is calibrated to a printing bed height that is based on 2mm PMMA plus BuildTak. I now print on glass which fits nicely with the E3D V6's slightly higher nozzle.
