@@ -38,9 +38,11 @@ Don't be fooled by E3D's "this is easy". I had to update the bootloader as well.
 See files for the configuration with the E3D v6 hotend. There also is a compiled image.
 After removing the printer's back side for the nth time I decided it was time for a boot jumper extension dangling at the side. Makes firmware upgrades/changes much easier.
 
+# Lighting
+There's nothing to see, here... literally. Without additional lighting it's pretty hard to see what is going on inside the printer. The main contributing factor surely is the solid side/rear walls. So I got a cheap 12V LED stripe from aliexpress (https://www.aliexpress.com/item/32333870936.html?spm=a2g0s.9042311.0.0.27424c4dBqQZxE), cut it to size and mounted it above the front opening on 3D-printed 45° mounts. 
+
 # To Do
-* Adjustable Z axis end switch. The stock one is calibrated to a printing bed height that is based on 2mm PMMA plus BuildTak. I now print on glass which fits nicely with the E3D V6's slightly higher nozzle.
-* Lighting (LED stripes are on their way, there still is one free +12V supply header).
+* Adjustable Z axis end switch. The stock one is calibrated to a printing bed height that is based on 2mm PMMA plus BuildTak. I now print on glass which fits nicely with the E3D V6's slightly higher nozzle..
 * Heated Bed (parts are here) to prevent warping when printing on glass. Plus finally printing material other than PLA.
 * Replace Printrboard (Duet3D WiFi is on its way).
 * Replace T3 belts and pulleys with standard T2.5 (distant future. Parts are here, though).
