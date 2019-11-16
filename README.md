@@ -41,6 +41,10 @@ After removing the printer's back side for the nth time I decided it was time fo
 # Lighting
 There's nothing to see, here... literally. Without additional lighting it's pretty hard to see what is going on inside the printer. The main contributing factor surely is the solid side/rear walls. So I got a cheap 12V LED stripe from aliexpress (https://www.aliexpress.com/item/32333870936.html?spm=a2g0s.9042311.0.0.27424c4dBqQZxE), cut it to size and mounted it above the front opening on 3D-printed 45° mounts. 
 
+# Extruder Upgrade
+As previously stated: The extruder is an utter piece of cr.p. To fix this, I've added a Bondtech BMG extruder. It is driven by a Trinamic stepper. There is an adapter on Thingiverse: https://www.thingiverse.com/thing:3010010
+Catch is: The holes for mounting the extruder adapter do not fit the holes on Kakadu's Hotend mount. So you either do the entire thing at once with Mechanotronikum's files (including his Hotend Mount). Or you take the modified parts I'm providing here.
+
 # Various Fixes
 ## Printrboard Rev D
 Duh. Someone please adjust the (lead free?!?) reflow solder process parameters. I've always had that strange feeling with the Micro USB jack. Guess what? It came off today. Rock solid contact for the tabs connecting +-Signal/GND/+5V. Not so much for the chassis of the jack. Luckily, only the Sense Pin's trace came off the PCB. That one wasn't connected anyway. So I spent the better half of the evening looking for my bag of USB connectors. Finally found them and soldered a new SMT USB jack onto the board. Lead, please. Somehow, I have a feeling of knowing why I usually choose through-hole USB connectors. Even when using SMT connectors, there are some that provide two little tabs that go into holes on the PCB. Much better transfer of mechanical loads when plugging/unplugging. The jack probably held such a long time only because of not being used very often: GRR's Neo uses an old-fashioned USB B type connector that is internally wired to the Micro USB jack. 
