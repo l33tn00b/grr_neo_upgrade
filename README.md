@@ -41,6 +41,10 @@ After removing the printer's back side for the nth time I decided it was time fo
 # Lighting
 There's nothing to see, here... literally. Without additional lighting it's pretty hard to see what is going on inside the printer. The main contributing factor surely is the solid side/rear walls. So I got a cheap 12V LED stripe from aliexpress (https://www.aliexpress.com/item/32333870936.html?spm=a2g0s.9042311.0.0.27424c4dBqQZxE), cut it to size and mounted it above the front opening on 3D-printed 45° mounts. 
 
+# Various Fixes
+## Printrboard Rev D
+Duh. Someone please adjust the (lead free?!?) reflow solder process parameters. I've always had that strange feeling with the Micro USB jack. Guess what? It came off today. Rock solid contact for the tabs connecting +-Signal/GND/+5V. Not so much for the chassis of the jack. Luckily, only the Sense Pin's trace came off the PCB. That one wasn't connected anyway. So I spent the better half of the evening looking for my bag of USB connectors. Finally found them and soldered a new SMT USB jack onto the board. Lead, please. Somehow, I have a feeling of knowing why I usually choose through-hole USB connectors. Even when using SMT connectors, there are some that provide two little tabs that go into holes on the PCB. Much better transfer of mechanical loads when plugging/unplugging. The jack probably held such a long time only because of not being used very often: GRR's Neo uses an old-fashioned USB B type connector that is internally wired to the Micro USB jack. 
+
 # To Do
 * Adjustable Z axis end switch. The stock one is calibrated to a printing bed height that is based on 2mm PMMA plus BuildTak. I now print on glass which fits nicely with the E3D V6's slightly higher nozzle..
 * Heated Bed (parts are here) to prevent warping when printing on glass. Plus finally printing material other than PLA.
