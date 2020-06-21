@@ -45,6 +45,7 @@ There's nothing to see, here... literally. Without additional lighting it's pret
 # Extruder Upgrade
 As previously stated: The extruder is an utter piece of cr.p. To fix this, I've added a Bondtech BMG extruder. It is driven by a Trinamic stepper. There is an adapter on Thingiverse: https://www.thingiverse.com/thing:3010010
 Catch is: The holes for mounting the extruder adapter do not fit the holes on Kakadu's Hotend mount. So you either do the entire thing at once with Mechanotronikum's files (including his Hotend Mount). Or you take the modified parts I'm providing here (https://github.com/l33tn00b/grr_neo_upgrade/blob/master/adapter_loecher_angepasst.stl).
+Dooh. Tried to implement bed probing for mesh calibration by means of a piezo probe (yet another modification to the direct drive upgrade). Turns out that the bed has different resistance to the downward force when coming in contact with the nozzle. Viewed from the front of the printer: Left side of the bed offers less resistance that right hand side. This is obvious when turning around the printer: On the left, there is only one guide around the rod, on the right side there's two. So there is much more stability on the right hand side in terms of twisting. This printer was designed by <insert favorite insult>.  
 
 # Various Fixes
 ## Printrboard Rev D
