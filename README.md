@@ -21,6 +21,7 @@ Issues on the way were:
 * Fitting the new cables (thicker heater cartridge supply cables) into the cable guide.
 * The E3D's nozzle is slightly higher than the stock nozzle. Printing on 3mm glass, now. The additional half (or so) millimetre makes up for that.
 * The Y-Endstop needs to be moved to the right. This is due to the new carriage being a bit wider. Keep the screw in its slightly rotated position towards the back of the printer. Else the carriage will collide with it but not trigger the endstop.
+Update: See issues for comments from the original creator of the direct drive upgrade.
 
 # Firmware Upgrade
 The printer comes with a repetier firmware v0.82. Nowadays, repetier is at v1.0.3. So while I was at the hotend upgrade I decided to update the firmware as well. The main reason was that I had to recompile anyway (because of the new thermistor included in the E3D v6).
