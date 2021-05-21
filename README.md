@@ -54,6 +54,6 @@ Duh. Someone please adjust the (lead free?!?) reflow solder process parameters. 
 
 # To Do
 * Adjustable Z axis end switch. The stock one is calibrated to a printing bed height that is based on 2mm PMMA plus BuildTak. I now print on glass which fits nicely with the E3D V6's slightly higher nozzle..
-* Heated Bed (parts are here) to prevent warping when printing on glass. Plus finally printing material other than PLA.
+* Heated Bed (parts are here) to prevent warping when printing on glass. Plus finally printing material other than PLA. See https://github.com/l33tn00b/grr_neo_upgrade/blob/master/halterung_druckbett_2%20v1.step for a sketch of the mounting adapter for classic 4-point mounting of a heated print bed.
 * Replace Printrboard (Duet3D WiFi is on its way).
 * Replace T3 belts and pulleys with standard T2.5 (distant future. Parts are here, though).
