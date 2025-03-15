@@ -1,8 +1,8 @@
 # grr_neo_upgrade
-Upgrading the German RepRap (GRR) Neo to be a useable printer
+Upgrading the German RepRap (GRR) Neo to be a usable printer
 
 I've been using a German RepRap Neo 3D Printer for quite a while now.
-But it has somehow always left me wanting. Oozing was terrible, precision wasn't really superb. Speed sucked. But why? The mechanics are not quite rock solid but very decent. It has a metal frame and a z-axis spindle. On the other hand there are some design choices that are at best questionable. T3 pulleys and belts? The DD2 extruder, directly fixed to the extruder's stepper motor (good luck with the threads, the spring load gets fed into these with hilariously short screws). No cooling fan. 
+But it has somehow always left me wanting. Oozing was terrible, precision wasn't really superb. Speed sucked. But why? The mechanics are not quite rock solid but very decent. It has a metal frame and a z-axis spindle. On the other hand there are some design choices that are at best questionable. T3 pulleys and belts? The DD2 extruder, directly affixed to the extruder's stepper motor (good luck with the threads, the spring load gets fed into these with hilariously short screws). No cooling fan. 
 
 I bought the printer at a discount. It had been used as a display/demonstration unit at a local electronics market (think Best Buy). Actually, I can't remember the date, it must have been around 2015/2016. 
 
@@ -23,7 +23,7 @@ Issues on the way were:
 * The Y-Endstop needs to be moved to the right. This is due to the new carriage being a bit wider. Keep the screw in its slightly rotated position towards the back of the printer. Else the carriage will collide with it but not trigger the endstop.
 Update: See issues for comments from the original creator of the direct drive upgrade.
 
-# Firmware Upgrade
+# Firmware Upgrade 
 The printer comes with a repetier firmware v0.82. Nowadays, repetier is at v1.0.3. So while I was at the hotend upgrade I decided to update the firmware as well. The main reason was that I had to recompile anyway (because of the new thermistor included in the E3D v6).
 Don't be fooled by E3D's "this is easy". I had to update the bootloader as well. Assuming that you already have the Arduino IDE installed and that you're in possession of a programmer...
 ## Firmware compilation
@@ -52,8 +52,15 @@ Dooh. Tried to implement bed probing for mesh calibration by means of a piezo pr
 ## Printrboard Rev D
 Duh. Someone please adjust the (lead free?!?) reflow solder process parameters. I've always had that strange feeling with the Micro USB jack. Guess what? It came off today. Rock solid contact for the tabs connecting +-Signal/GND/+5V. Not so much for the chassis of the jack. Luckily, only the Sense Pin's trace came off the PCB. That one wasn't connected anyway. So I spent the better half of the evening looking for my bag of USB connectors. Finally found them and soldered a new SMT USB jack onto the board. Lead, please. Somehow, I have a feeling of knowing why I usually choose through-hole USB connectors. Even when using SMT connectors, there are some that provide two little tabs that go into holes on the PCB. Much better transfer of mechanical loads when plugging/unplugging. The jack probably held such a long time only because of not being used very often: GRR's Neo uses an old-fashioned USB B type connector that is internally wired to the Micro USB jack. 
 
+# Adjustable Z Endstop
+Upgraded to inductive endstop. See https://www.thingiverse.com/thing:892356  
+Use an NPN Endstop, makes life much easier. You need a BAT43 Diode for that. See https://forum.duet3d.com/topic/10596/sanity-check-plz-omron-inductive-switch-for-xyz-endstops/6?_=1593251170749  
+
+# Heated Bed
+Don't use Bang-Bang mode. Do a PID tune.
+
 # To Do
-* Adjustable Z axis end switch. The stock one is calibrated to a printing bed height that is based on 2mm PMMA plus BuildTak. I now print on glass which fits nicely with the E3D V6's slightly higher nozzle..
-* Heated Bed (parts are here) to prevent warping when printing on glass. Plus finally printing material other than PLA. See https://github.com/l33tn00b/grr_neo_upgrade/blob/master/halterung_druckbett_2%20v1.step for a sketch of the mounting adapter for classic 4-point mounting of a heated print bed.
-* Replace Printrboard (Duet3D WiFi is on its way).
+* Done: Adjustable Z axis end switch. The stock one is calibrated to a printing bed height that is based on 2mm PMMA plus BuildTak. I now print on glass which fits nicely with the E3D V6's slightly higher nozzle..
+* Done: Heated Bed (parts are here) to prevent warping when printing on glass. Plus finally printing material other than PLA. See https://github.com/l33tn00b/grr_neo_upgrade/blob/master/halterung_druckbett_2%20v1.step for a sketch of the mounting adapter for classic 4-point mounting of a heated print bed.
+* Done: Replace Printrboard (Duet3D WiFi is on its way).
 * Replace T3 belts and pulleys with standard T2.5 (distant future. Parts are here, though).
