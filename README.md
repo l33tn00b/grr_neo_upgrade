@@ -52,12 +52,19 @@ Dooh. Tried to implement bed probing for mesh calibration by means of a piezo pr
 ## Printrboard Rev D
 Duh. Someone please adjust the (lead free?!?) reflow solder process parameters. I've always had that strange feeling with the Micro USB jack. Guess what? It came off today. Rock solid contact for the tabs connecting +-Signal/GND/+5V. Not so much for the chassis of the jack. Luckily, only the Sense Pin's trace came off the PCB. That one wasn't connected anyway. So I spent the better half of the evening looking for my bag of USB connectors. Finally found them and soldered a new SMT USB jack onto the board. Lead, please. Somehow, I have a feeling of knowing why I usually choose through-hole USB connectors. Even when using SMT connectors, there are some that provide two little tabs that go into holes on the PCB. Much better transfer of mechanical loads when plugging/unplugging. The jack probably held such a long time only because of not being used very often: GRR's Neo uses an old-fashioned USB B type connector that is internally wired to the Micro USB jack. 
 
+# Duet2 Wifi Upgrade
+Used Mechanotronikum's excellent Duet2 Wifi board holder: https://www.myminifactory.com/object/3d-print-neodue-part-1-duet-wifi-for-grr-neo-130755
+
 # Adjustable Z Endstop
 Upgraded to inductive endstop. See https://www.thingiverse.com/thing:892356  
 Use an NPN Endstop, makes life much easier. You need a BAT43 Diode for that. See https://forum.duet3d.com/topic/10596/sanity-check-plz-omron-inductive-switch-for-xyz-endstops/6?_=1593251170749  
 
 # Heated Bed
 Don't use Bang-Bang mode. Do a PID tune.
+
+# 24V Upgrade
+The bed heater draws quite some power. See https://docs.duet3d.com/User_manual/Connecting_hardware/Heaters_bed  
+So everything runs on 24V, now. Duet board, Hotend heater cartridge, Bed heater. Power is supplied from a Meanwell LRS-350-24. Alternate is Meanwell GST220A24-R76. Re-Did the power supply PCB
 
 # To Do
 * Done: Adjustable Z axis end switch. The stock one is calibrated to a printing bed height that is based on 2mm PMMA plus BuildTak. I now print on glass which fits nicely with the E3D V6's slightly higher nozzle..
