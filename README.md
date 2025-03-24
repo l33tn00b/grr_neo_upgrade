@@ -2,7 +2,7 @@
 Upgrading the German RepRap (GRR) Neo to be a usable printer
 
 I've been using a German RepRap Neo 3D Printer for quite a while now.
-But it has somehow always left me wanting. Oozing was terrible, precision wasn't really superb. Speed sucked. But why? The mechanics are not quite rock solid but very decent. It has a metal frame and a z-axis spindle. On the other hand there are some design choices that are at best questionable. T3 pulleys and belts? The DD2 extruder, directly affixed to the extruder's stepper motor (good luck with the threads, the spring load gets fed into these with hilariously short screws). No cooling fan. 
+But it has somehow always left me wanting. Oozing was terrible, precision wasn't really superb. Speed sucked. But why? The mechanics are not quite rock solid but very decent. It has a metal frame and a z-axis spindle. On the other hand there are some design choices that are at best questionable. T3 pulleys and belts? The DD2 extruder, directly attached to the extruder's stepper motor (good luck with the threads, the spring load gets fed into these with hilariously short screws). No cooling fan. 
 
 I bought the printer at a discount. It had been used as a display/demonstration unit at a local electronics market (think Best Buy). Actually, I can't remember the date, it must have been around 2015/2016. 
 
@@ -19,7 +19,7 @@ Hotend assembly is at https://e3d-online.dozuki.com/Guide/V6+Assembly/6?lang=en.
 You will have to shorten the belts to fit these into Kakadu's hotend mount. This is not a problem since you'll never want to return to the stock hotend.
 Issues on the way were:
 * Fitting the new cables (thicker heater cartridge supply cables) into the cable guide.
-* The E3D's nozzle is slightly higher than the stock nozzle. Printing on 3mm glass, now. The additional half (or so) millimetre makes up for that.
+* The E3D's nozzle is slightly higher than the stock nozzle. Printing on 3mm glass, now (correction: Using the heated bed, it's a PEI metal plate). The additional half (or so) millimetre makes up for that.
 * The Y-Endstop needs to be moved to the right. This is due to the new carriage being a bit wider. Keep the screw in its slightly rotated position towards the back of the printer. Else the carriage will collide with it but not trigger the endstop.
 Update: See issues for comments from the original creator of the direct drive upgrade.
 
