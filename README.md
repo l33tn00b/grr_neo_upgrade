@@ -1,4 +1,7 @@
 # grr_neo_upgrade
+
+RIP my two NEOs. This is now archive only.
+
 Upgrading the German RepRap (GRR) Neo to be a usable printer
 
 I've been using a German RepRap Neo 3D Printer for quite a while now.
